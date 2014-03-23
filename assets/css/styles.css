@@ -58,7 +58,7 @@ header #nav a:hover {color: #E0EDC2; border-bottom: 1px solid #E0EDC2}
 #we-are-flexible .c5a {min-height:590px; padding:50px 30px 30px;}
 #we-hire-great-people a {color: #FFF; border-bottom: 1px solid #FFF; transition: border .25s, color .25s; -moz-transition: border .25s, color .25s; -webkit-transition: border .25s, color .25s; }
 #we-hire-great-people a:hover {color: #161829; border-bottom: 1px solid #161829}
-#we-hire-great-people .c5a {min-height:940px; padding:85px 30px 30px;}
+#we-hire-great-people .c5a {min-height:940px; padding:50px 30px 30px;}
 #we-hire-great-people .content {background:#2A9E6A;}
 
 .wrapper{background: url(../images/triangleCream.svg) no-repeat, #5D8C81; background-size: cover; min-height: 100%; height: auto !important; padding:0 0 294px;}
