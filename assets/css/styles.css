@@ -1,26 +1,26 @@
 @charset "UTF-8";
 
 /* ---- COLORS ---- */
-.white {color: #FFF} 							/* White */
-.drkBlue {color: #161829} 						/* Dark Blue */
-.drkSeafoam {color: #5D8C81} 					/* Dark Seafoam */
-.sage {color: #7E9E7B} 							/* Sage */
-.cream {color: #E0EDC2} 						/* Cream */
-.green {color: #2A9E6A} 						/* Green */
+.white {color: #FFF}                            /* White */
+.drkBlue {color: #161829}                       /* Dark Blue */
+.drkSeafoam {color: #5D8C81}                    /* Dark Seafoam */
+.sage {color: #7E9E7B}                          /* Sage */
+.cream {color: #E0EDC2}                         /* Cream */
+.green {color: #2A9E6A}                         /* Green */
 
-.bg-white {background: #FFF !important} 					/* White */
-.bg-drkBlue {background: #161829} 				/* Dark Blue */
-.bg-nav { background: rgba(22, 25, 42, 0.6) !important}		/* Dark Blue */
-.bg-drkSeafoam {background: #5D8C81} 			/* Dark Seafoam */
-.bg-sage {background: #7E9E7B} 					/* Sage */
-.bg-cream {background: #E0EDC2} 				/* Cream */
-.bg-green {background: #2A9E6A} 				/* Green */
+.bg-white {background: #FFF !important}         /* White */
+.bg-drkBlue {background: #161829}               /* Dark Blue */
+.bg-nav { background: rgba(22, 25, 42, 0.6) !important}        /* Dark Blue */
+.bg-drkSeafoam {background: #5D8C81}            /* Dark Seafoam */
+.bg-sage {background: #7E9E7B}                  /* Sage */
+.bg-cream {background: #E0EDC2}                 /* Cream */
+.bg-green {background: #2A9E6A}                 /* Green */
 
 /* ---- FONT WEIGHTS --- */
-.w100 {font-weight: 100} 						/* Thin */
-.w300 {font-weight: 300}						/* Light*/
-.w400 {font-weight: 400}						/* Regular */
-.w700 {font-weight: 700}						/* Bold */
+.w100 {font-weight: 100}                        /* Thin */
+.w300 {font-weight: 300}                        /* Light*/
+.w400 {font-weight: 400}                        /* Regular */
+.w700 {font-weight: 700}                        /* Bold */
 
 /* ---- FONTS --- */
 .proxima-nova {font-family:  "proxima-nova", "Helvetica", Helvetica, Arial, sans-serif; font-size:14px; line-height: 24px}
@@ -87,7 +87,7 @@ header #nav a:hover {color: #E0EDC2; border-bottom: 1px solid #E0EDC2}
 .footer a:hover {opacity: .5}
 .footer a{border:none; transition: opacity .25s; -moz-transition: opacity .25s; -webkit-transition: opacity .25s;}
 .footer a {vertical-align: middle;}
-.footer a img {margin:0 10px;} 
+.footer a img {margin:0 10px;}
 .footer h1 {display: inline; margin: 0 25px 0 0; vertical-align: middle}
 .footer .to-top {padding:15px 0 0; float:left; clear:both;}
 .footer .to-top a{font-size: 16px !important; }
@@ -129,10 +129,10 @@ nav {height: 0}
 }
 
 #new-toggle.active::after {
-	color: #E0EDC2;
-  	font-size: 43px;
-  	content:"x";
-  	top:3px;
+  color: #E0EDC2;
+  font-size: 43px;
+  content:"x";
+  top:3px;
 }
 
 .nav-collapse a{font-size: 20px;}
