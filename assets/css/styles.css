@@ -71,11 +71,13 @@ header #nav a:hover {color: #E0EDC2; border-bottom: 1px solid #E0EDC2}
 #jobs-intro a{color: #FFF; border-bottom: 1px solid #FFF}
 #jobs-intro a:hover{color: #161829; border-bottom: 1px solid #161829}
 
+#job-details ul {color: inherit}
+
 .job-post a{color: #FFF; border-bottom: 1px solid #FFF}
 .job-post a:hover{color: #161829; border-bottom: 1px solid #161829}
 
 .job-post {background: url(../images/anthemLogoGreen.svg) no-repeat, #5D8C81; background-size: auto 110%; background-position: 0 0; padding: 0 0 294px !important}
-.job-post .c5a {min-height:940px; padding:50px 30px 30px;}
+.job-post .c5a {min-height:1000px; padding:50px 30px 30px;}
 
 .job-post-title {padding: 0 0 20px}
 .job-post-title h3{padding: 0 0 10px}
