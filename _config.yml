@@ -3,3 +3,11 @@ description: "Anthem Engineering is a software, systems, and solutions company f
 
 url: ""
 permalink: pretty
+
+#livereload: true     # You no longer need to include --livereload
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+exclude: []

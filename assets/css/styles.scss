@@ -1,0 +1,23 @@
+---
+---
+
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome/scss/font-awesome";
+
+body, html {
+  height: 100%;
+}
+.anthemBg{
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: .9;
+  height: 100%;
+  background-image: url($bg-image);
+}

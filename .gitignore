@@ -1,2 +1,6 @@
 .DS_Store
 _site
+=3.0.0
+Gemfile
+*.lock
+package-lock.json
