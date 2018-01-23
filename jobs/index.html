@@ -7,42 +7,11 @@ category: pages
 
 <body>
   <div class="wrapper wrapper-jobs">
-    <!-- RESPONSIVE NAV -->
-    <nav class="nav-collapse bg-green">
-        <ul>
-          <li><a href="{{site.url}}/#about">WHO WE ARE</a></li>
-          <li><a href="{{site.url}}/jobs/">WORKING WITH US</a></li>
-          <li><a href="{{site.url}}/#work">JOIN THE TEAM</a></li>
-          <li class="no-border"><a href="#contact">CONTACT US</a></li>
-        </ul>
-      </nav>
-      <!-- END RESPONSIVE NAV -->
+    {% include responsive-nav.html %}
 
-      <!-- HEADER -->
+    <!-- HEADER -->
     <header id="jobs">
-      <!-- NAV -->
-      <a name="top"></a>
-      <section id="nav">
-        <div class="content">
-        <div class="grid">
-          <div class="row" >
-            <div class="c11 centered">
-              <div id="nav-logo">
-                <a id="logo" href="{{site.url}}/" title="Anthem Engineering"></a>
-              </div>
-              <div id="new-toggle"><a href="#">MENU</a></div>
-              <div class="long-nav">
-                    <a href="{{site.url}}/#about">WHO WE ARE</a>
-                <a href="{{site.url}}/jobs/">WORKING WITH US</a>
-                <a href="{{site.url}}/#work">JOIN THE TEAM</a>
-                <a href="#contact">CONTACT US</a>
-                </div>
-            </div>
-          </div>
-        </div> <!-- grid -->
-        </div> <!-- content -->
-      </section>
-      <!-- END NAV -->
+      {% include standard-nav.html %}
     </header>
 
     <section id="jobs-intro" >
