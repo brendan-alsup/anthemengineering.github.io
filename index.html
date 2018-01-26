@@ -6,19 +6,28 @@ category: pages
 {% include header.html %}
 
 <body>
-  <div id="site_background" class="anthemBg"></div>
-
   <div class="container-fluid">
-    <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
       <section id="home">
-        {% include navbar.html %}
-        {% include home.html %}
+        <div class="home-bg stripe-bg"></div>
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+          {% include navbar.html %}
+          {% include home.html %}
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about-bg stripe-bg"></div>
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+          {% include about.html %}
+        </div>
       </section>
 
       <section id="contact">
-        {% include footer.html %}
+        <div class="contact-bg stripe-bg"></div>
+        <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+          {% include footer.html %}
+        </div>
       </section>
-    </div>
   </div>
 </body>
 </html>

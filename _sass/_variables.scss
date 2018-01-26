@@ -1,10 +1,26 @@
-$bg-image: '../images/unlicensed/network.jpg';
 $fa-font-path: '../../node_modules/font-awesome/fonts';
+$font-size-base: .8rem;
 
 $green:#90DA4F;
 $orange:#FF7700;
 $pink:#C62E65;
+
+$gray-100: #f1f1f1;
+$gray-200: #d1d1d1;
+$gray-300: #c1c1c1;
+$gray-400: #b1b1b1;
+$gray-500: #a1a1a1;
+$gray-600: #919191;
+$gray-700: #818181;
+$gray-800: #717171;
+$gray-900: #616161;
+
+$primary: $gray-200;
+
 $navbar-dark-active-color: $green;
+
+$font-family-sans-serif: proxima-nova, sans-serif;
+$headings-font-family: 'Josefin Sans', sans-serif;
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
