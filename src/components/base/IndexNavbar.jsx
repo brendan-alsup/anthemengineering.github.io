@@ -201,13 +201,13 @@ class IndexNavbar extends React.Component {
                     <i className="tim-icons icon-paper" />
                     Home
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/careers">
-                    <i className="tim-icons icon-bullet-list-67" />
-                    Careers
-                  </DropdownItem>
                   <DropdownItem tag={Link} to="/about-us">
                     <i className="tim-icons icon-bullet-list-67" />
                     About Us
+                  </DropdownItem>
+                  <DropdownItem tag={Link} to="/contact-us">
+                    <i className="tim-icons icon-bullet-list-67" />
+                    Contact Us
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

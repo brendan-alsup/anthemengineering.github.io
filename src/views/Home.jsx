@@ -9,7 +9,7 @@ import Footer from '../components/base/Footer.jsx';
 
 // index page sections
 import Hero from "../components/Hero.jsx";
-import Buttons from "./IndexSections/Buttons.jsx";
+/*import Buttons from "./IndexSections/Buttons.jsx";
 import Inputs from "./IndexSections/Inputs.jsx";
 import CustomControls from "./IndexSections/CustomControls.jsx";
 import Menus from "./IndexSections/Menus.jsx";
@@ -27,8 +27,8 @@ import TooltipPopover from "./IndexSections/TooltipPopover.jsx";
 import Carousel from "./IndexSections/Carousel.jsx";
 import Icons from "./IndexSections/Icons.jsx";
 import Login from "./IndexSections/Login.jsx";
-import Download from "./IndexSections/Download.jsx";
-import EmployeeCardsDisplay from "./EmployeeCardsDisplay";
+import Download from "./IndexSections/Download.jsx";*/
+import EmployeeCardsDisplay from "../components/EmployeeCardsDisplay";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -39,13 +39,12 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <IndexNavbar />
         <main ref="main">
           <Hero />
 
           <EmployeeCardsDisplay />
 
-          <Buttons />
+{/*          <Buttons />
           <Inputs />
           <section className="section">
             <Container>
@@ -75,9 +74,9 @@ class Home extends React.Component {
           <Carousel />
           <Icons />
           <Login />
-          <Download />
+          <Download />*/}
+
         </main>
-        <Footer />
       </>
     );
   }
