@@ -2,6 +2,7 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
+import OurContracts from "../components/OurContracts";
 
 // TODO replace images with 800 x 800
 const items = [
@@ -33,6 +34,7 @@ class Carousel extends React.Component {
             <span />
           </div>
           <Container className="py-md">
+            {/* Header *********************************************************/}
             <Row className="justify-content-between align-items-center">
               <Col className="mb-5 mb-lg-0" lg="6">
                 <h2 className="text-white font-weight-light">
@@ -58,7 +60,9 @@ class Carousel extends React.Component {
                 </div>
               </Col>
             </Row>
+            {/* End Header *****************************************************/}
           </Container>
+
           {/* SVG separator */}
           <div className="separator separator-bottom separator-skew">
             <svg
@@ -73,6 +77,10 @@ class Carousel extends React.Component {
             </svg>
           </div>
         </section>
+
+        {/* New Contracts ****************************************************/}
+        <OurContracts />
+        {/* End New Contracts ************************************************/}
       </>
     );
   }

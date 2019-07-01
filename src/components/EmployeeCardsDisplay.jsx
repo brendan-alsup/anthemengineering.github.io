@@ -12,34 +12,51 @@ class EmployeeCardsDisplay extends React.Component {
           <Row>
             <Col>
               <Card>
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                <CardImg
+                  top
+                  width="100%"
+                  src={require('../assets/img/employees/chuck-norris.jpeg')}
+                  alt="Card image cap"
+                  style={{maxHeight: "250px"}}/>
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                  <Button>Button</Button>
+                  <CardTitle><b>Chuck Norris</b></CardTitle>
+                  <CardSubtitle>Software Master</CardSubtitle>
+                  <CardText>When Chuck Norris throws exceptions, it's across the room.</CardText>
+                  <Button>View Team Member</Button>
                 </CardBody>
               </Card>
             </Col>
             <Col>
               <Card>
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                <CardImg
+                  top
+                  width="100%"
+                  src={require('../assets/img/employees/jet-li.jpeg')}
+                  alt="Card image cap"
+                  style={{maxHeight: "250px"}}
+                />
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                  <Button>Button</Button>
+                  <CardTitle><b>Jet Li</b></CardTitle>
+                  <CardSubtitle>Software Engineer</CardSubtitle>
+                  <CardText>Some stuff</CardText>
+                  <Button>View Team Member</Button>
                 </CardBody>
               </Card>
             </Col>
             <Col>
               <Card>
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                <CardImg
+                  top
+                  width="100%"
+                  src={require('../assets/img/employees/hulk-hogan.jpeg')}
+                  alt="Card image cap"
+                  style={{maxHeight: "250px"}}
+                />
                 <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                  <Button>Button</Button>
+                  <CardTitle><b>Hulk Hogan</b></CardTitle>
+                  <CardSubtitle>Human Resources</CardSubtitle>
+                  <CardText>You can't see me</CardText>
+                  <Button>View Team Member</Button>
                 </CardBody>
               </Card>
             </Col>
