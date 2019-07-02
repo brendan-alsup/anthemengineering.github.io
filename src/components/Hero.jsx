@@ -2,6 +2,7 @@ import React from "react";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
+import { Link } from 'react-router-dom'
 
 class Hero extends React.Component {
   render() {
@@ -37,31 +38,37 @@ class Hero extends React.Component {
                       Software. Solutions. Success
                     </p>
                     <div className="btn-wrapper mt-5">
-                      <Button
-                        className="btn-white btn-icon mb-3 mb-sm-0"
-                        color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                      >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="ni ni-app" />
-                        </span>
-                        <span className="btn-inner--text">About Us</span>
-                      </Button>{" "}
-                      <Button
-                        className="btn-icon mb-3 mb-sm-0"
-                        color="github"
-                        href="https://github.com/creativetimofficial/argon-design-system-react"
-                        size="lg"
-                        target="_blank"
-                      >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="ni ni-world" />
-                        </span>
-                        <span className="btn-inner--text">
-                          <span className="text-warning mr-1">Careers</span>
-                        </span>
-                      </Button>
+                      {/* Link to about-us page *****************************/}
+                      <Link to="/about-us">
+                        <Button
+                          className="btn-white btn-icon mb-3 mb-sm-0"
+                          color="default"
+                          size="lg"
+                        >
+                          <span className="btn-inner--icon mr-1">
+                            <i className="ni ni-app" />
+                          </span>
+                          <span className="btn-inner--text">About Us</span>
+                        </Button>{" "}
+                      </Link>
+                      {/* End Link to about-us page *************************/}
+                      {/* Link to careers page ******************************/}
+                      <Link to="/contact-us">
+                        <Button
+                          className="btn-icon mb-3 mb-sm-0"
+                          color="github"
+                          size="lg"
+                          target="_blank"
+                        >
+                          <span className="btn-inner--icon mr-1">
+                            <i className="ni ni-world" />
+                          </span>
+                          <span className="btn-inner--text">
+                            <span className="text-info mr-1">Careers</span>
+                          </span>
+                        </Button>
+                      </Link>
+                      {/* End Link to careers page **************************/}
                     </div>
                   </Col>
                 </Row>
