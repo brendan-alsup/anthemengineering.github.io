@@ -3,6 +3,7 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
 import OurContracts from "../components/OurContracts";
+import SolutionsDisplay from "../components/SolutionsDisplay";
 
 // TODO replace images with 800 x 800
 const items = [
@@ -77,6 +78,8 @@ class Carousel extends React.Component {
             </svg>
           </div>
         </section>
+
+        <SolutionsDisplay />
 
         {/* New Contracts ****************************************************/}
         <OurContracts />
