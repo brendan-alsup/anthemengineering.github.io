@@ -2,6 +2,11 @@
 _site
 *.swp
 
+# production
+# Will probably need to un-ignore to serve to GitHub
+build/
+
+# node
 node_modules
 
 # IDE generated files
