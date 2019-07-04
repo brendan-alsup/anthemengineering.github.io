@@ -1,23 +1,30 @@
-import React from 'react'
-import {Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Container, Row} from "reactstrap";
+import React from 'react';
+import {Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Container, Row} from 'reactstrap';
+import CardDeck from 'reactstrap/es/CardDeck';
 
-class EmployeeCardsDisplay extends React.Component {
-  render () {
+/*
+* Displays the employees of Anthem Engineering
+* TODO Get pictures and information from employees to use
+* TODO Randomly select three employees from the list and display them
+* TODO Route to profile page when 'View Team Member Button' is clicked
+* */
+export default class EmployeeCardsDisplay extends React.Component {
+  render() {
     return (
-      <section className="section section-components pb-0">
+      <section className='section section-components pb-0'>
         <Container>
-          <h2 className="mb-5">
+          <h2 className='mb-5'>
             <span>Meet a Few of Our Team Members</span>
           </h2>
           <Row>
-            <Col>
+            <CardDeck>
               <Card>
                 <CardImg
                   top
-                  width="100%"
+                  width='100%'
                   src={require('../assets/img/employees/chuck-norris.jpeg')}
-                  alt="Card image cap"
-                  style={{maxHeight: "250px"}}/>
+                  alt='Card image cap'
+                  style={{maxHeight: '250px'}}/>
                 <CardBody>
                   <CardTitle><b>Chuck Norris</b></CardTitle>
                   <CardSubtitle>Software Master</CardSubtitle>
@@ -25,15 +32,13 @@ class EmployeeCardsDisplay extends React.Component {
                   <Button>View Team Member</Button>
                 </CardBody>
               </Card>
-            </Col>
-            <Col>
               <Card>
                 <CardImg
                   top
-                  width="100%"
+                  width='100%'
                   src={require('../assets/img/employees/jet-li.jpeg')}
-                  alt="Card image cap"
-                  style={{maxHeight: "250px"}}
+                  alt='Card image cap'
+                  style={{maxHeight: '250px'}}
                 />
                 <CardBody>
                   <CardTitle><b>Jet Li</b></CardTitle>
@@ -42,15 +47,13 @@ class EmployeeCardsDisplay extends React.Component {
                   <Button>View Team Member</Button>
                 </CardBody>
               </Card>
-            </Col>
-            <Col>
               <Card>
                 <CardImg
                   top
-                  width="100%"
+                  width='100%'
                   src={require('../assets/img/employees/hulk-hogan.jpeg')}
-                  alt="Card image cap"
-                  style={{maxHeight: "250px"}}
+                  alt='Card image cap'
+                  style={{maxHeight: '250px'}}
                 />
                 <CardBody>
                   <CardTitle><b>Hulk Hogan</b></CardTitle>
@@ -59,12 +62,10 @@ class EmployeeCardsDisplay extends React.Component {
                   <Button>View Team Member</Button>
                 </CardBody>
               </Card>
-            </Col>
+            </CardDeck>
           </Row>
         </Container>
       </section>
-    )
+    );
   }
 }
-
-export default EmployeeCardsDisplay;

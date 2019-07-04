@@ -1,13 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Container, Row } from 'reactstrap'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Container, Row} from 'reactstrap';
 
 OurContracts.propTypes = {
   // sets the html ID for the root of the component
   sectionId: PropTypes.string
-}
+};
 
-export default function OurContracts (props) {
+/*
+* Renders content pertaining to Anthem Engineering's contracts
+* */
+export default function OurContracts(props) {
   return (
     <section id={props.sectionId} className='section section-components pb-0'>
       <Container>
@@ -27,12 +30,12 @@ export default function OurContracts (props) {
                   in revenue. The majority of our work will be based out of our Maryland locations.
                 </CardText>
                 {/* TODO add button that expands the textbox after a text limit is reached. */}
-                {/*<Button>Button</Button>*/}
+                {/* <Button>Button</Button>*/}
               </CardBody>
             </Card>
           </Col>
         </Row>
       </Container>
     </section>
-  )
+  );
 }

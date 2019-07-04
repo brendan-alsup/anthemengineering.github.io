@@ -1,20 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-// reactstrap components
-import { Col,
+import React from 'react';
+import {Link} from 'react-router-dom';
+import {
+  Col,
   Collapse,
   Container,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
   Nav,
-  NavbarBrand,
   Navbar,
+  NavbarBrand,
   NavItem,
   NavLink,
   Row,
   UncontrolledDropdown
-} from "reactstrap";
+} from 'reactstrap';
 
 /*
 * Contains styles for the header of
@@ -24,7 +24,7 @@ const imgHeaderStyle = {
   width: '15%'
 };
 
-class IndexNavbar extends React.Component {
+export default class IndexNavbar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -39,11 +39,11 @@ class IndexNavbar extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.changeColor);
+    window.addEventListener('scroll', this.changeColor);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.changeColor);
+    window.removeEventListener('scroll', this.changeColor);
   }
 
   /*
@@ -56,7 +56,7 @@ class IndexNavbar extends React.Component {
       document.body.scrollTop > 10
     ) {
       this.setState({
-        backgroundColor: "bg-secondary",
+        backgroundColor: 'bg-secondary',
         logoColor: '#414141',
         logoImage: require('../../assets/img/brand/anthem-engineering-logo.png')
       });
@@ -65,7 +65,7 @@ class IndexNavbar extends React.Component {
       document.body.scrollTop < 11
     ) {
       this.setState({
-        backgroundColor: "navbar-transparent",
+        backgroundColor: 'navbar-transparent',
         logoColor: 'white',
         logoImage: require('../../assets/img/brand/anthem-engineering-logo-white.png')
       });
@@ -73,7 +73,7 @@ class IndexNavbar extends React.Component {
   };
 
   toggleCollapse = () => {
-    document.documentElement.classList.toggle("nav-open");
+    document.documentElement.classList.toggle('nav-open');
     this.setState({
       collapseOpen: !this.state.collapseOpen
     });
@@ -81,111 +81,111 @@ class IndexNavbar extends React.Component {
 
   onCollapseExiting = () => {
     this.setState({
-      collapseOut: "collapsing-out"
+      collapseOut: 'collapsing-out'
     });
   };
 
   onCollapseExited = () => {
     this.setState({
-      collapseOut: ""
+      collapseOut: ''
     });
   };
 
   render() {
     return (
       <Navbar
-        className={"fixed-top " + this.state.backgroundColor}
-        color-on-scroll="100"
-        expand="lg"
+        className={'fixed-top ' + this.state.backgroundColor}
+        color-on-scroll='100'
+        expand='lg'
       >
         <Container>
           {/* Logo *********************************************************************************/}
-          <div className="navbar-translate">
+          <div className='navbar-translate'>
             <NavbarBrand
-              data-placement="bottom"
-              to="/"
-              rel="noopener noreferrer"
+              data-placement='bottom'
+              to='/'
+              rel='noopener noreferrer'
               tag={Link}
             >
-              <img alt="..." src={this.state.logoImage}  style={imgHeaderStyle}/>
+              <img alt='...' src={this.state.logoImage} style={imgHeaderStyle}/>
               <span style={{color: this.state.logoColor}}><b>Anthem</b>Engineering</span>
             </NavbarBrand>
           </div>
           {/* End Logo *****************************************************************************/}
 
           <Collapse
-            className={"justify-content-end " + this.state.collapseOut}
+            className={'justify-content-end ' + this.state.collapseOut}
             navbar
             isOpen={this.state.collapseOpen}
             onExiting={this.onCollapseExiting}
             onExited={this.onCollapseExited}
           >
-            <div className="navbar-collapse-header">
+            <div className='navbar-collapse-header'>
               <Row>
-                <Col className="collapse-brand" xs="6">
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                <Col className='collapse-brand' xs='6'>
+                  <a href='#pablo' onClick={(e) => e.preventDefault()}>
                     Anthem Engineering
                   </a>
                 </Col>
-                <Col className="collapse-close text-right" xs="6">
+                <Col className='collapse-close text-right' xs='6'>
                   <button
                     aria-expanded={this.state.collapseOpen}
-                    className="navbar-toggler"
+                    className='navbar-toggler'
                     onClick={this.toggleCollapse}
                   >
-                    <i className="tim-icons icon-simple-remove" />
+                    <i className='tim-icons icon-simple-remove' />
                   </button>
                 </Col>
               </Row>
             </div>
-            <Nav className="align-items-lg-center ml-lg-auto" navbar>
+            <Nav className='align-items-lg-center ml-lg-auto' navbar>
               {/* Social Media Links *****************************************************/}
-              <NavItem className="p-0">
+              <NavItem className='p-0'>
                 <NavLink
-                  data-placement="bottom"
-                  href="https://twitter.com/anthemeng"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Follow us on Twitter"
+                  data-placement='bottom'
+                  href='https://twitter.com/anthemeng'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  title='Follow us on Twitter'
                 >
-                  <i className="fa fa-twitter" />
-                  <p className="d-lg-none d-xl-none">Twitter</p>
+                  <i className='fa fa-twitter' />
+                  <p className='d-lg-none d-xl-none'>Twitter</p>
                 </NavLink>
               </NavItem>
-              <NavItem className="p-0">
+              <NavItem className='p-0'>
                 <NavLink
-                  data-placement="bottom"
-                  href="https://www.facebook.com/AnthemEngineering/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Like us on Facebook"
+                  data-placement='bottom'
+                  href='https://www.facebook.com/AnthemEngineering/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  title='Like us on Facebook'
                 >
-                  <i className="fa fa-facebook-square" />
-                  <p className="d-lg-none d-xl-none">Facebook</p>
+                  <i className='fa fa-facebook-square' />
+                  <p className='d-lg-none d-xl-none'>Facebook</p>
                 </NavLink>
               </NavItem>
-              <NavItem className="p-0">
+              <NavItem className='p-0'>
                 <NavLink
-                  data-placement="bottom"
-                  href="https://github.com/anthemengineering"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Checkout code from our GitHub"
+                  data-placement='bottom'
+                  href='https://github.com/anthemengineering'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  title='Checkout code from our GitHub'
                 >
-                  <i className="fa fa-github" />
-                  <p className="d-lg-none d-xl-none">GitHub</p>
+                  <i className='fa fa-github' />
+                  <p className='d-lg-none d-xl-none'>GitHub</p>
                 </NavLink>
               </NavItem>
-              <NavItem className="p-0">
+              <NavItem className='p-0'>
                 <NavLink
-                  data-placement="bottom"
-                  href="https://www.linkedin.com/company/anthem-engineering-llc/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  title="Follow us on LinkedIn"
+                  data-placement='bottom'
+                  href='https://www.linkedin.com/company/anthem-engineering-llc/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  title='Follow us on LinkedIn'
                 >
-                  <i className="fa fa-linkedin" />
-                  <p className="d-lg-none d-xl-none">LinkedIn</p>
+                  <i className='fa fa-linkedin' />
+                  <p className='d-lg-none d-xl-none'>LinkedIn</p>
                 </NavLink>
               </NavItem>
               {/* End Social Media Links **********************************************************/}
@@ -194,28 +194,28 @@ class IndexNavbar extends React.Component {
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
-                  color="default"
-                  data-toggle="dropdown"
-                  href="#pablo"
+                  color='default'
+                  data-toggle='dropdown'
+                  href='#pablo'
                   nav
-                  onClick={e => e.preventDefault()}
+                  onClick={(e) => e.preventDefault()}
                 >
-                  <i className="ni ni-collection d-lg-none mr-1" />
-                  <span className="nav-link-inner--text">Page Navigation</span>
+                  <i className='ni ni-collection d-lg-none mr-1' />
+                  <span className='nav-link-inner--text'>Page Navigation</span>
                   {/* TODO Change 'Page Navigation' to dynamically render what the current page is on */}
                 </DropdownToggle>
                 {/* 'Position: absolute' prevents the dropdown menu from being positioned over dropdown toggle */}
-                <DropdownMenu className="dropdown-with-icons" style={{position: 'absolute'}}>
-                  <DropdownItem tag={Link} to="/home">
-                    <i className="tim-icons icon-paper" />
+                <DropdownMenu className='dropdown-with-icons' style={{position: 'absolute'}}>
+                  <DropdownItem tag={Link} to='/home'>
+                    <i className='tim-icons icon-paper' />
                     Home
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/about-us">
-                    <i className="tim-icons icon-bullet-list-67" />
+                  <DropdownItem tag={Link} to='/about-us'>
+                    <i className='tim-icons icon-bullet-list-67' />
                     About Us
                   </DropdownItem>
-                  <DropdownItem tag={Link} to="/contact-us">
-                    <i className="tim-icons icon-bullet-list-67" />
+                  <DropdownItem tag={Link} to='/contact-us'>
+                    <i className='tim-icons icon-bullet-list-67' />
                     Contact Us
                   </DropdownItem>
                 </DropdownMenu>
@@ -228,5 +228,3 @@ class IndexNavbar extends React.Component {
     );
   }
 }
-
-export default IndexNavbar;

@@ -1,12 +1,11 @@
 import React from 'react';
-
-// reactstrap components
-import { Button, Container, Row, Col, UncontrolledCarousel } from 'reactstrap';
+import {Button, Col, Container, Row, UncontrolledCarousel} from 'reactstrap';
 import OurContracts from '../components/OurContracts';
 import SolutionsDisplay from '../components/SolutionsDisplay';
+import SvgSeparator from '../components/base/SvgSeparator';
 
 // TODO replace images with 800 x 800
-const items = [
+const carouselImages = [
   {
     src: require('../assets/img/networking.jpg'),
     altText: '',
@@ -21,6 +20,9 @@ const items = [
   }
 ];
 
+/**
+* Displays content pertaining to information about Anthem Engineering
+*/
 export default class AboutUs extends React.Component {
   constructor(props) {
     super(props);
@@ -29,19 +31,20 @@ export default class AboutUs extends React.Component {
       // sets the id for the contracts section and passes it to the component as a prop, so button can scroll to element
       contractsElementIdToScroll: 'contracts-section-id',
       solutionsElementIdToScroll: 'solutions-section-id'
-    }
+    };
   }
 
   scrollToDownload = () => {
     document
-      .getElementById(this.state.contractsElementIdToScroll)
-      .scrollIntoView({ behavior: 'smooth' });
+        .getElementById(this.state.contractsElementIdToScroll)
+        .scrollIntoView({behavior: 'smooth'});
   };
 
   render() {
     return (
       <>
         <section className='section section-shaped'>
+
           {/* Header Background Design *****************************************/}
           <div className='shape shape-style-1 shape-dark'>
             <span />
@@ -52,6 +55,7 @@ export default class AboutUs extends React.Component {
             <span />
           </div>
           {/* End Header Background Design *************************************/}
+
           {/* Header ***********************************************************/}
           <Container className='py-md'>
             <Row className='justify-content-between align-items-center'>
@@ -75,26 +79,17 @@ export default class AboutUs extends React.Component {
               </Col>
               <Col className='mb-lg-auto' lg='6'>
                 <div className='rounded shadow-lg overflow-hidden transform-perspective-right'>
-                  <UncontrolledCarousel items={items} />
+                  <UncontrolledCarousel items={carouselImages} />
                 </div>
               </Col>
             </Row>
           </Container>
           {/* End Header *******************************************************/}
 
-          {/* SVG separator */}
-          <div className='separator separator-bottom separator-skew'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              preserveAspectRatio='none'
-              version='1.1'
-              viewBox='0 0 2560 100'
-              x='0'
-              y='0'
-            >
-              <polygon className='fill-white' points='2560 0 2560 100 0 100' />
-            </svg>
-          </div>
+          {/* SVG separator ****************************************************/}
+          <SvgSeparator />
+          {/* End SVG separator ************************************************/}
+
         </section>
 
         {/* Our Solutions ****************************************************/}

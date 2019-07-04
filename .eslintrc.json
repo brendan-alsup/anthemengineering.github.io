@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "google",
+        "plugin:react/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/jsx-uses-vars": [2], // allow JSX syntax (rendering components) e.g <Component />
+        "require-jsdoc": "off", // prevents from asking to write docs for common react features e.g. ComponentWillMount
+        "max-len": [2, 120, 2], // warn, maximum length of 120, tab width 2
+        "comma-dangle": [ // throws an error if there is a dangling comma in object
+            "error",
+            "never"
+        ],
+        "no-invalid-this": "off", // prevents eslint from throwing errors for using 'this' when 'this' is needed
+        "react/no-unescaped-entities": "off"
+
+    }
+}

@@ -1,12 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { CardDeck, Container, Jumbotron, Row, Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+import React from 'react';
+import PropTypes from 'prop-types';
+import {CardDeck, Container, Jumbotron, Row, Card, CardImg, CardBody, CardTitle, CardText} from 'reactstrap';
 
 SolutionsDisplay.propTypes = {
   // sets the html ID for the root of the component
   sectionId: PropTypes.string
-}
+};
 
+/*
+* Displays the types of solutions that Anthem Engineering offers
+* */
 export default function SolutionsDisplay(props) {
   return (
     <Jumbotron id={props.sectionId}>
@@ -18,7 +21,7 @@ export default function SolutionsDisplay(props) {
            cards at the same height regardless of the content*/}
           <CardDeck>
             <Card>
-              <CardImg top width='100%' src={require('../assets/img/big-data-hand-to-earth.jpg')} alt='Card image cap' />
+              <CardImg top width='100%' src={require('../assets/img/big-data-hand-to-earth.jpg')} alt='Card image cap'/>
               <CardBody>
                 <CardTitle><b>Big Data</b></CardTitle>
                 <CardText>
@@ -74,5 +77,5 @@ export default function SolutionsDisplay(props) {
         </Row>
       </Container>
     </Jumbotron>
-  )
+  );
 }
