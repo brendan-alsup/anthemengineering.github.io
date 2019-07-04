@@ -60,7 +60,7 @@
   position: relative;
   margin-bottom: 0;
 
-  // Background-color and (when enabled) gradient
+  // Background-backgroundColor and (when enabled) gradient
   &::before {
     position: absolute;
     top: (($font-size-base * $line-height-base - $custom-control-indicator-size) / 2);

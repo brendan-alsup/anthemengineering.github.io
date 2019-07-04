@@ -13,8 +13,8 @@
     *,
     *::before,
     *::after {
-      // Bootstrap specific; comment out `color` and `background`
-      //color: $black !important; // Black prints faster
+      // Bootstrap specific; comment out `backgroundColor` and `background`
+      //backgroundColor: $black !important; // Black prints faster
       text-shadow: none !important;
       //background: transparent !important;
       box-shadow: none !important;

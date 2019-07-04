@@ -70,7 +70,7 @@
   display: flex;
 
   // Ensure buttons are always above inputs for more visually pleasing borders.
-  // This isn't needed for `.input-group-text` since it shares the same border-color
+  // This isn't needed for `.input-group-text` since it shares the same border-backgroundColor
   // as our inputs.
   .btn {
     position: relative;

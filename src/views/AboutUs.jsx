@@ -22,11 +22,18 @@ const items = [
 ];
 
 class Carousel extends React.Component {
+
+  scrollToDownload = () => {
+    document
+      .getElementById("download-section")
+      .scrollIntoView({ behavior: "smooth" });
+  };
+
   render() {
     return (
       <>
         <section className="section section-shaped">
-          <div className="shape shape-style-1 shape-default">
+          <div className="shape shape-style-1 shape-dark">
             <span />
             <span />
             <span />

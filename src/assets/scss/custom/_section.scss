@@ -34,7 +34,7 @@
     .stars-and-coded{
         margin-top: 8rem;
     }
-    
+
     .shape {
         position: absolute;
         top: 0;
@@ -285,7 +285,7 @@
             }
         }
 
-        // shape color variations
+        // shape backgroundColor variations
         &.shape-primary {
             background: linear-gradient(150deg, shapes-primary-color("step-1-gradient-bg") 15%, shapes-primary-color("step-2-gradient-bg") 70%, shapes-primary-color("step-3-gradient-bg") 94%);
         }
@@ -304,7 +304,7 @@
         }
     }
 
-    // Styles - works with a color variation class (e.g shapes-default)
+    // Styles - works with a backgroundColor variation class (e.g shapes-default)
     .shape-style-2 {
         span {
             height: 190px;

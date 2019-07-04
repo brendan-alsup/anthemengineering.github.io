@@ -18,9 +18,9 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #8898aa !default;   // Line footer color
-$gray-700: #525f7f !default;   // Line p color
-$gray-800: #32325d !default;   // Line heading color
+$gray-600: #8898aa !default;   // Line footer backgroundColor
+$gray-700: #525f7f !default;   // Line p backgroundColor
+$gray-800: #32325d !default;   // Line heading backgroundColor
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
@@ -175,13 +175,13 @@ $shapes-dark-colors: map-merge((
 ), $shapes-dark-colors);
 
 
-// Set a specific jump point for requesting color jumps
+// Set a specific jump point for requesting backgroundColor jumps
 $theme-color-interval:      8% !default;
 
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// The yiq lightness value that determines when the lightness of backgroundColor changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  200 !default;
 
-// Customize the light and dark text colors for use in our YIQ color contrast function.
+// Customize the light and dark text colors for use in our YIQ backgroundColor contrast function.
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
 

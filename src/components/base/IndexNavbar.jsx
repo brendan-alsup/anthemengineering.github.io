@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 // reactstrap components
-import {
-  Col,
+import { Col,
   Collapse,
   Container,
   DropdownItem,
@@ -29,20 +27,28 @@ const imgHeaderStyle = {
 class IndexNavbar extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       collapseOpen: false,
-      color: "navbar-transparent"
+      backgroundColor: 'navbar-transparent',
+      logoColor: 'white',
+      // TODO determine better method to deliver dynamic image other than a relative path
+      // Also, JavaScript bundler has issues handling dynamic `require`, so I prepended `require` to the relative path
+      logoImage: require('../../assets/img/brand/anthem-engineering-logo-white.png')
     };
   }
+
   componentDidMount() {
     window.addEventListener("scroll", this.changeColor);
   }
+
   componentWillUnmount() {
     window.removeEventListener("scroll", this.changeColor);
   }
 
   /*
-  * Navbar changes color depending on scrolling location
+  * As the scrolling location changes, the navbar changes the following properties:
+  * navbar background color, logo color, logo picture(one white & the other grey)
   * */
   changeColor = () => {
     if (
@@ -50,43 +56,45 @@ class IndexNavbar extends React.Component {
       document.body.scrollTop > 10
     ) {
       this.setState({
-        color: "bg-info"
+        backgroundColor: "bg-secondary",
+        logoColor: '#414141',
+        logoImage: require('../../assets/img/brand/anthem-engineering-logo.png')
       });
     } else if (
       document.documentElement.scrollTop < 11 ||
       document.body.scrollTop < 11
     ) {
       this.setState({
-        color: "navbar-transparent"
+        backgroundColor: "navbar-transparent",
+        logoColor: 'white',
+        logoImage: require('../../assets/img/brand/anthem-engineering-logo-white.png')
       });
     }
   };
+
   toggleCollapse = () => {
     document.documentElement.classList.toggle("nav-open");
     this.setState({
       collapseOpen: !this.state.collapseOpen
     });
   };
+
   onCollapseExiting = () => {
     this.setState({
       collapseOut: "collapsing-out"
     });
   };
+
   onCollapseExited = () => {
     this.setState({
       collapseOut: ""
     });
   };
-  scrollToDownload = () => {
-    document
-      .getElementById("download-section")
-      .scrollIntoView({ behavior: "smooth" });
-  };
 
   render() {
     return (
       <Navbar
-        className={"fixed-top " + this.state.color}
+        className={"fixed-top " + this.state.backgroundColor}
         color-on-scroll="100"
         expand="lg"
       >
@@ -99,8 +107,8 @@ class IndexNavbar extends React.Component {
               rel="noopener noreferrer"
               tag={Link}
             >
-              <img alt="..." src={require("../../assets/img/brand/anthem-engineering-logo-white.png")}  style={imgHeaderStyle}/>
-              <span><b>Anthem</b>Engineering</span>
+              <img alt="..." src={this.state.logoImage}  style={imgHeaderStyle}/>
+              <span style={{color: this.state.logoColor}}><b>Anthem</b>Engineering</span>
             </NavbarBrand>
           </div>
           {/* End Logo *****************************************************************************/}
@@ -180,9 +188,9 @@ class IndexNavbar extends React.Component {
                   <p className="d-lg-none d-xl-none">LinkedIn</p>
                 </NavLink>
               </NavItem>
-              {/* End Social Media Links *************************************************/}
+              {/* End Social Media Links **********************************************************/}
 
-              {/* Page Navigation ********************************************************/}
+              {/* Page Navigation DropDown ********************************************************/}
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
@@ -196,7 +204,8 @@ class IndexNavbar extends React.Component {
                   <span className="nav-link-inner--text">Page Navigation</span>
                   {/* TODO Change 'Page Navigation' to dynamically render what the current page is on */}
                 </DropdownToggle>
-                <DropdownMenu className="dropdown-with-icons">
+                {/* 'Position: absolute' prevents the dropdown menu from being positioned over dropdown toggle */}
+                <DropdownMenu className="dropdown-with-icons" style={{position: 'absolute'}}>
                   <DropdownItem tag={Link} to="/home">
                     <i className="tim-icons icon-paper" />
                     Home
@@ -211,7 +220,7 @@ class IndexNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              {/* End Page Navigation ****************************************************/}
+              {/* End Page Navigation ***********************************************************/}
             </Nav>
           </Collapse>
         </Container>

@@ -50,7 +50,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 // Body
 //
 // 1. Remove the margin in all browsers.
-// 2. As a best practice, apply a default `background-color`.
+// 2. As a best practice, apply a default `background-backgroundColor`.
 // 3. Set an explicit initial text-align value so that we can later use the
 //    the `inherit` value on things like `<th>` elements.
 
@@ -408,7 +408,7 @@ fieldset {
 }
 
 // 1. Correct the text wrapping in Edge and IE.
-// 2. Correct the color inheritance from `fieldset` elements in IE.
+// 2. Correct the backgroundColor inheritance from `fieldset` elements in IE.
 legend {
   display: block;
   width: 100%;

@@ -63,7 +63,7 @@
   }
 }
 
-// Retrieve color Sass maps
+// Retrieve backgroundColor Sass maps
 @function color($key: "blue") {
   @return map-get($colors, $key);
 }
@@ -76,7 +76,7 @@
   @return map-get($grays, $key);
 }
 
-// Request a theme color level
+// Request a theme backgroundColor level
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
   $color-base: if($level > 0, $black, $white);
