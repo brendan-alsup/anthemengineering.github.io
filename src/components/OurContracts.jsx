@@ -1,11 +1,17 @@
 import React from 'react'
-import {Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Container, Row} from "reactstrap";
+import PropTypes from 'prop-types'
+import { Card, CardBody, CardSubtitle, CardText, CardTitle, Col, Container, Row } from 'reactstrap'
 
-function OurContracts () {
+OurContracts.propTypes = {
+  // sets the html ID for the root of the component
+  sectionId: PropTypes.string
+}
+
+export default function OurContracts (props) {
   return (
-    <section className="section section-components pb-0">
+    <section id={props.sectionId} className='section section-components pb-0'>
       <Container>
-        <h2 className="mb-5">
+        <h2 className='mb-5'>
           <span>New Contracts</span>
         </h2>
         <Row>
@@ -20,6 +26,7 @@ function OurContracts () {
                   Chemical and Biological Defense (JPEO-CBD). JE-RDAP is a 10 year IDIQ award worth 8 billion dollars
                   in revenue. The majority of our work will be based out of our Maryland locations.
                 </CardText>
+                {/* TODO add button that expands the textbox after a text limit is reached. */}
                 {/*<Button>Button</Button>*/}
               </CardBody>
             </Card>
@@ -29,5 +36,3 @@ function OurContracts () {
     </section>
   )
 }
-
-export default OurContracts;

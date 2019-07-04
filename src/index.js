@@ -49,6 +49,12 @@ ReactDOM.render(
         exact
         render={props => <Register {...props} />}
       />
+      {/* TODO add page not found and remove redirect afterwards
+      <Route
+        path='*'
+        render={props => <PageNotFound {...props} />}
+      />
+      */}
       <Redirect to="/" />
     </Switch>
     <Footer />
